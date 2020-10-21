@@ -394,6 +394,28 @@ section {
     .step-text {
         flex: 100%
     }
+    .service-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr) 2fr 1fr;
+    }
+    .service-grid-item.basic {
+        grid-column: 1/2;
+    }
+    .service-grid-item.premium {
+        grid-column: 2/-1;
+    }
+    .service-grid-item.both {
+        grid-column: 1/-1;
+    }
+    .grid-head, .grid-price, .service-grid-item.cancel {
+        font-weight: bold;
+    }
+    .service-grid-item.cancel {
+        writing-mode: unset;
+        transform: none;
+        grid-column: 1/-1;
+        grid-row: -2/-1;
+    }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
